@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+float simpleInterest(float principal, float time, float rate = 5.0) {
+    return (principal * time * rate) / 100;
+}
+
+int main() {
+    float principal, time, rate;
+    char choice;
+
+    cout << "Enter the Principal amount: ";
+    cin >> principal;
+
+    cout << "Enter the Time (in years): ";
+    cin >> time;
+
+    cout << "Do you want to enter the Rate of Interest? (y/n): ";
+    cin >> choice;
+
+    if (choice == 'y' || choice == 'Y') {
+        cout << "Enter the Rate of Interest: ";
+        cin >> rate;
+        cout << "Simple Interest: " << simpleInterest(principal, time, rate) << endl;
+    } else {
+        cout << "Simple Interest (with default 5% rate): " << simpleInterest(principal, time) << endl;
+    }
+
+    return 0;
+}
