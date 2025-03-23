@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+inline int cube(int num) {
+    return num * num * num;
+}
+
+int main() {
+    int value;
+    
+    cout << "Enter a number: ";
+    cin >> value; 
+    
+    cout << "Cube of " << value << " is " << cube(value) << endl;
+    
+    return 0;
+}
