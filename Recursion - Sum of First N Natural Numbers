@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+int sumOfNaturalNumbers(int n) {
+    if (n == 0)  // Base case
+        return 0;
+    return n + sumOfNaturalNumbers(n - 1); 
+}
+
+int main() {
+    int n;
+    
+    cout << "Enter a positive number: ";
+    cin >> n;
+
+    if (n < 0) {
+        cout << "Please enter a positive number!" << endl;
+    } else {
+        cout << "Sum of first " << n << " natural numbers is: " << sumOfNaturalNumbers(n) << endl;
+    }
+
+    return 0;
+}
+Q10. answer ////////////////////////////////////////////////////////////////////////////////////////
+#include <iostream>
+using namespace std;
+
+
+void printNumbers(int n) {
+    if (n == 0) 
+        return;
+
+    cout << n << " ";
+    printNumbers(n - 1);  
+}
+
+int main() {
+    int n;
+    
+    cout << "Enter a positive number: ";
+    cin >> n;
+
+    if (n < 1) {
+        cout << "Please enter a positive number!" << endl;
+    } else {
+        cout << "Numbers from " << n << " to 1: ";
+        printNumbers(n);
+        cout << endl;
+    }
+
+    return 0;
+}
