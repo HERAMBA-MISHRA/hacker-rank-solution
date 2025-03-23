@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+inline int square(int num) {
+    return num * num;
+}
+
+int main() {
+    int value;
+    
+    cout << "Enter a number: ";
+    cin >> value; // User inputs a number
+    
+    cout << "Square of " << value << " is " << square(value) << endl;
+    
+    return 0;
+}
